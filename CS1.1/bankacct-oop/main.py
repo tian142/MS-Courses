@@ -28,15 +28,26 @@ class BankAccount:
         self.balance += interest
 
     def get_balance(self):
+        print('-----------Account Balance-----------')
         print(f"Hello! Your account balance is: ${self.balance: .2f}")
 
     def print_receipt(self):
+        print('-----------Account Details-----------')
         print(f"{self.full_name}")
         print(f"Account No.: {self.account_number}")
         print(f"Routing No.: {self.routing_number}")
         print(f"Balance: ${self.balance: .2f}")
 
 
-a1 = BankAccount('Marry', 100)
-a1.deposit(100)
-# a1.print_receipt()
+acct1 = BankAccount('Marry', 200)
+acct1.deposit(100)
+acct1.print_receipt()
+
+acct2 = BankAccount('Alex', 200)
+acct2.withdraw(150)
+acct2.get_balance()
+
+acct3 = BankAccount('Joe', 300)
+acct3.deposit(300)
+acct3.add_interest()
+acct2.print_receipt()
