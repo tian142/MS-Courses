@@ -11,9 +11,15 @@ class BankAccount:
 
     def deposit(self, amount):
         self.balance += amount
+        print(f"Amount Deposited: ${amount}")
 
     def withdraw(self, amount):
-        self.balance -= amount
+        if self.balance < amount:
+            self.balance - 10
+            return (print('Insufficient funds.'))
+        else:
+            self.balance -= amount
+            print(f"Amount Withdrawn :${amount}")
 
     def add_interest(self):
         interest = self.balance * 0.00083
@@ -27,14 +33,3 @@ class BankAccount:
         print(f"Account No.:{self.account_number}")
         print(f"Routing No.:{self.routing_number}")
         print(f"Balance: ${self.balance}")
-
-
-a1 = BankAccount('John Olsson', 12)
-
-a1.print_receipt()
-a1.deposit(200)
-a1.print_receipt()
-a1.withdraw(100)
-a1.print_receipt()
-a1.add_interest()
-a1.get_balance()
