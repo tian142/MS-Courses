@@ -1,5 +1,8 @@
+//Thank you Mitchell for allowing me to do an alternative assignment!
 // This random card game is made from the guide provided by Blake Hearn:  https://medium.com/@blakeeh723/how-to-build-a-card-game-with-object-oriented-programming-c43cd2cadb3a
+
 //defines a class of a Card with suit, rank, and value. This will be used in the create deck method in the Deck Class
+console.log('hi');
 class Card {
   constructor(suit, rank, value) {
     this.suit = suit;

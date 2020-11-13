@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block title %} Compliments Results {% endblock %}
+{% block content %}
+
+<!-- Your HTML code goes here! -->
+Hello {{user_name}}!
+
+<p>Here are you complements:</p>
+<ul>
+  {% if complements_boolean == 'yes' %} {% for line in complements %}
+  <li>{{line}}</li>
+  {% endfor %} {% endif %}
+</ul>
+
+{% endblock %}
